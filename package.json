@@ -4,15 +4,15 @@
   "version": "1.0.0",
   "type": "module",
   "description": "A beautiful, minimalist Markdown editor with real-time preview and dark mode support",
-  "author": "Your Name <your.email@example.com>",
+  "author": "Yorkie",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/yourusername/inkwell.git"
+    "url": "https://github.com/YorkieDev/inkwell.git"
   },
-  "homepage": "https://github.com/yourusername/inkwell#readme",
+  "homepage": "https://github.com/YorkieDev/inkwell#readme",
   "bugs": {
-    "url": "https://github.com/yourusername/inkwell/issues"
+    "url": "https://github.com/YorkieDev/inkwell/issues"
   },
   "keywords": [
     "markdown",
