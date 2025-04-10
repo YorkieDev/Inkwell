@@ -28,7 +28,7 @@ Inkwell is a beautiful, minimalist Markdown editor with real-time preview, dark 
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/inkwell.git
+   git clone https://github.com/YorkieDev/inkwell.git
    cd inkwell
    ```
 
