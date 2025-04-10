@@ -1,0 +1,171 @@
+@import "tailwindcss";
+
+@plugin "@tailwindcss/typography";
+
+/* Set up theme configuration */
+@theme {
+  --color-primary-500: oklch(0.6 0.2 240);
+  --color-primary-600: oklch(0.5 0.2 240);
+}
+
+/* Custom animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@utility animate-fade-in {
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+@utility animate-slide-in {
+  animation: slideIn 0.3s ease-out;
+}
+
+/* Explicitly set dark mode strategy using class strategy only */
+@variant dark (.dark);
+
+/* Global color variables that work independently of Tailwind */
+:root {
+  --bg-primary: #ffffff;
+  --text-primary: #18181b;
+  --bg-secondary: #f4f4f5;
+  --bg-secondary-hover: #e4e4e7;
+  --border-color: #e4e4e7;
+  --code-bg: #f1f5f9;
+  --code-text: #334155;
+  --heading-color: #18181b;
+  --link-color: #2563eb;
+}
+
+.dark {
+  --bg-primary: #18181b !important;
+  --text-primary: #ffffff !important;
+  --bg-secondary: #27272a !important;
+  --bg-secondary-hover: #3f3f46 !important;
+  --border-color: #3f3f46 !important;
+  --code-bg: #1e293b !important;
+  --code-text: #e2e8f0 !important;
+  --heading-color: #ffffff !important;
+  --link-color: #3b82f6 !important;
+}
+
+/* Direct styling overrides */
+html, body {
+  background-color: var(--bg-primary) !important;
+  color: var(--text-primary) !important;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+/* Direct editor styling */
+.editor-area {
+  background-color: var(--bg-primary) !important;
+  color: var(--text-primary) !important;
+  border-color: var(--border-color) !important;
+}
+
+/* Direct preview styling */
+.preview-area {
+  background-color: var(--bg-primary) !important;
+  color: var(--text-primary) !important;
+  border-color: var(--border-color) !important;
+}
+
+/* Light mode prose overrides */
+html:not(.dark) .prose h1,
+html:not(.dark) .prose h2,
+html:not(.dark) .prose h3,
+html:not(.dark) .prose h4,
+html:not(.dark) .prose h5,
+html:not(.dark) .prose h6,
+html:not(.dark) .prose p,
+html:not(.dark) .prose a,
+html:not(.dark) .prose li,
+html:not(.dark) .prose strong,
+html:not(.dark) .prose em,
+html:not(.dark) .prose blockquote {
+  color: #18181b !important;
+}
+
+/* Dark mode prose overrides */
+html.dark .prose h1,
+html.dark .prose h2,
+html.dark .prose h3,
+html.dark .prose h4,
+html.dark .prose h5,
+html.dark .prose h6,
+html.dark .prose p,
+html.dark .prose a,
+html.dark .prose li,
+html.dark .prose strong,
+html.dark .prose em,
+html.dark .prose blockquote {
+  color: #ffffff !important;
+}
+
+/* Code styling with higher specificity */
+html:not(.dark) .prose pre,
+html:not(.dark) .prose pre code,
+html:not(.dark) pre,
+html:not(.dark) pre code {
+  background-color: #f1f5f9 !important;
+  color: #334155 !important;
+}
+
+html.dark .prose pre,
+html.dark .prose pre code,
+html.dark pre,
+html.dark pre code {
+  background-color: #1e293b !important;
+  color: #e2e8f0 !important;
+}
+
+html:not(.dark) .prose code,
+html:not(.dark) code {
+  background-color: #f1f5f9 !important;
+  color: #334155 !important;
+}
+
+html.dark .prose code,
+html.dark code {
+  background-color: #1e293b !important;
+  color: #e2e8f0 !important;
+}
+
+code {
+  padding: 0.2em 0.4em;
+  border-radius: 0.25rem;
+}
+
+/* Override prose headings and links */
+html:not(.dark) .prose a {
+  color: #2563eb !important; 
+}
+
+html.dark .prose a {
+  color: #3b82f6 !important;
+}
+
+/* Fix buttons in dark mode */
+button {
+  color: var(--text-primary);
+}
+
+/* Focus styles */
+*:focus-visible {
+  outline: none;
+  ring: 2px solid #3b82f6;
+}
