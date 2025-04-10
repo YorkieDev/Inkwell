@@ -1,6 +1,7 @@
 # Inkwell - Modern Markdown Editor
 
-![Inkwell Screenshot](public/inkwell-screenshot.png)
+<img width="1724" alt="image" src="https://github.com/user-attachments/assets/81b3fe55-a6e5-4c0d-8c7d-7d779716043e" />
+
 
 Inkwell is a beautiful, minimalist Markdown editor with real-time preview, dark mode support, and automatic saving. It's designed to provide a distraction-free writing environment while giving you all the tools you need to format your content efficiently.
 
